@@ -1,5 +1,77 @@
+:root {
+    --color-shadow: rgba(0, 0, 0, .2);
+    --color-shadow-button: rgba(0, 0, 0, .6);
+    --color-red: red;
+    --color-button-generate: #774CAF;
+    --color-white: #FFF;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2em;
+    align-items: center;
+    
+}
+
+.colors {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.colors div {
+    background-color: var(--color-red);
+    width: 4.5em;
+    height: 4.5em;
+    border-radius: .25em;
+    margin: 0 .5em;
+    box-shadow: 0px 0px 10px var(--color-shadow);
+    transition: .5s;
+    position: relative;
+}
+
+.colors div:hover {
+    transform: scale(1.075);
+}
+
+.colors div p {
+    position: absolute;
+    top: 6.25em;
+    left: 1em;
+    font-size: .75em;
+}
+
+button {
+    width: 12em;
+    height: 2em;
+    background-color: var(--color-button-generate);
+    color: var(--color-white);
+    box-shadow: 0px 0px 6px var(--color-shadow-button);
+    border: none;
+    border-radius: .25em;
+    margin-top: 1em;
+    transition: .5s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    transition: .5s;
 }
